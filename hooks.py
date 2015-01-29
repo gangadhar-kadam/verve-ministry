@@ -64,13 +64,36 @@ app_version = "0.0.1"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Region Master": {
+		"validate": "church_ministry.church_ministry.doctype.region_master.region_master.validate_duplicate"		
+	},
+	"Zone Master": {
+		"validate": "church_ministry.church_ministry.doctype.zone_master.zone_master.validate_duplicate"		
+	},
+	"Church Group Master": {
+		"validate": "church_ministry.church_ministry.doctype.church_group_master.church_group_master.validate_duplicate"		
+	},
+	"Church Master": {
+		"validate": "church_ministry.church_ministry.doctype.church_master.church_master.validate_duplicate"		
+	},
+	"PCF Master": {
+		"validate": "church_ministry.church_ministry.doctype.pcf_master.pcf_master.validate_duplicate"		
+	},
+	"Senior Cell Master": {
+		"validate": "church_ministry.church_ministry.doctype.senior_cell_master.senior_cell_master.validate_duplicate"		
+	},
+	"Cell Master": {
+		"validate": "church_ministry.church_ministry.doctype.cell_master.cell_master.validate_duplicate"		
+	},
+	"Foundation School Exam Master": {
+		"validate": "church_ministry.church_ministry.doctype.foundation_school_exam_master.foundation_school_exam_master.validate_duplicate"		
+	},
+	"Grade Master": {
+		"validate": "church_ministry.church_ministry.doctype.grade_master.grade_master.validate_duplicate"		
+	}
+}
+
 
 # Scheduled Tasks
 # ---------------
